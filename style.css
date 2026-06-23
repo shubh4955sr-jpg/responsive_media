@@ -1,7 +1,12 @@
 * {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#menu-icon,
+#menu {
+  display: none;
 }
 
 body {
@@ -9,103 +14,197 @@ body {
 }
 
 .header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background-color:rgb(255, 253, 250);
-  padding:1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(255, 253, 250);
+
+  padding: 1rem;
+
+  position: relative; /* FIXED */
 }
 
 .list {
-  list-style:none;
-  display:flex;
-  gap:1rem;
+  list-style: none;
+
+  display: flex;
+
+  gap: 1rem;
 }
 
 .navbar ul li a {
-  text-decoration:none;
-  font-size:14px;
-  color:#333;
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
 }
 
 #logo {
-  font-size:20px;
-  font-weight:700;
-
+  font-size: 20px;
+  font-weight: 700;
 }
 
 #username {
-  background-color:rgb(209, 255, 255);
-  border-radius:5px;
-  padding:0.5rem 1rem;
-  color:rgb(19, 192, 211);
+  background-color: rgb(209, 255, 255);
+
+  border-radius: 5px;
+
+  padding: 0.5rem 1rem;
+
+  color: rgb(19, 192, 211);
 }
 
 .container-center {
-  display:flex;
-  flex-wrap:wrap;
-  min-height:92vh;
-}
-#section1{
-  flex:1 1 50%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:2rem 5rem;
+  display: flex;
 
+  flex-wrap: wrap;
+
+  background-color: aqua;
+
+  min-height: 92vh;
+}
+
+#section1 {
+  flex: 1 1 50%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 2rem 5rem;
 }
 
 #section2 {
-  flex:1 1 50%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  flex: 1 1 50%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
 }
 
 #image {
-  width:100%;
-  height:auto;
-  object-fit:cover;
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
 }
 
 p {
-  font-size:15px;
-  color:rgba(0,0,0,0.6);
+  font-size: 15px;
+
+  color: rgba(0, 0, 0, 0.6);
 }
-.container-element{
-  width:80%;
+
+.container-element {
+  width: 80%;
 }
 
 #button {
-  margin-top:1rem;
-  padding:0.75rem 1rem;
-  width:70%;
-  border-radius:10px;
-  background-color:rgb(18, 109, 255);
-  color:white;
-  border:none;
-  cursor:pointer;
+  margin-top: 1rem;
 
+  padding: 0.75rem 1rem;
+
+  width: 70%;
+
+  border-radius: 10px;
+
+  background-color: rgb(18, 109, 255);
+
+  color: white;
+
+  border: none;
+
+  cursor: pointer;
 }
-.container #button{
-  text-align:left;
+
+/* FIXED : wrong selector */
+#button {
+  text-align: left;
+}
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
+@media screen and (max-width: 440px) {
 
-
-@media screen and (max-width:440px) {
   .navbar {
-    display:none;
+    display: none;
+
+    position: absolute;
+
+    top: 60px;
+
+    right: 10px;
+
+    background: rgb(12, 12, 12);
+    height:100vh;
+
+    width: 200px;
+
+    border-radius: 8px;
+
+    padding: 1rem;
   }
+
+  /* FIXED : mobile me vertical menu */
+  .list {
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul li a {
+    color: white;
+  }
+
+  #menu-icon {
+    display: block;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    color: rgb(19, 192, 211);
+  }
+
+  /* FIXED : ab work karega */
+  #menu:checked ~ .navbar {
+    display: block;
+  }
+
   #logo {
-    font-size:24px;
+    font-size: 24px;
   }
+
   #username {
-    width:auto;
-    margin-top:0.5rem;
+    width: auto;
+
+    margin-top: 0.5rem;
   }
-  h1, p {
-    width:90%;
+
+  h1,
+  p {
+    width: 90%;
+  }
+
+  /* OPTIONAL RESPONSIVE FIX */
+  #section1,
+  #section2 {
+    flex: 1 1 100%;
+    padding: 2rem;
+  }
+
+  #button {
+    width: 90%;
   }
 }
