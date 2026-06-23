@@ -1,40 +1,75 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hero page responsive</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>hero page responsive</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <div class="header">
-        <div id="logo">Logo</div>
-        <nav class="navbar">
-            <ul class="list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div id="username">Username</div>
-    </div>
-    <div class="container-center">
-        <div id="section1">
-            <h1 class="container-element">Revitalize Your Clothes with 
-                Expert <span>Laundry Services!</span>
-            </h1>
-            <p class="container-element">From premium dry cleaning to swift wash and fold, we deliver care and convienience.Schedule a pickup and rediscover the freshness of your clothes today!</p>
-            <button id="button">Book a Service today</button>
-            
+
+  <div class="header">
+
+    <div id="logo">Logo</div>
+
+    <!-- FIXED : checkbox navbar se pehle kiya -->
+    <input type="checkbox" id="menu" />
+
+
+    <nav class="navbar">
+      <ul class="list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+        <div class="right-section">
+
+            <div id="username">Username</div>
+
+            <label for="menu" id="menu-icon">☰</label>
 
         </div>
-        <div id="section2">
-            <img src="image.webp" alt="laundry-image" id="image">
 
-        </div>
+  </div>
+
+  <div class="container-center">
+
+    <div id="section1">
+
+      <h1 class="container-element">
+        Revitalize Your Clothes with
+        Expert <span>Laundry Services!</span>
+      </h1>
+
+      <p class="container-element">
+        From premium dry cleaning to swift wash and fold,
+        we deliver care and convenience. Schedule a pickup
+        and rediscover the freshness of your clothes today!
+      </p>
+
+      <button id="button">
+        Book a Service today
+      </button>
 
     </div>
-    
+
+    <div id="section2">
+
+      <img
+        src="image.webp"
+        alt="laundry-image"
+        id="image"
+      />
+
+    </div>
+
+  </div>
+
 </body>
 </html>
