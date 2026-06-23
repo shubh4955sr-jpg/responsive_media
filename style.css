@@ -4,25 +4,42 @@
   box-sizing: border-box;
 }
 
-#menu-icon,
-#menu {
-  display: none;
-}
+/* BODY */
 
 body {
   font-family: Arial, sans-serif;
+  overflow-x:hidden;
 }
+
+/* HEADER */
 
 .header {
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
+
+  justify-content: space-between;
 
   background-color: rgb(255, 253, 250);
 
   padding: 1rem;
 
-  position: relative; /* FIXED */
+}
+
+/* LOGO */
+
+#logo {
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+/* NAVBAR DESKTOP */
+
+.navbar {
+  margin-left: auto;
+
+  margin-right: auto;
 }
 
 .list {
@@ -35,14 +52,23 @@ body {
 
 .navbar ul li a {
   text-decoration: none;
+
   font-size: 14px;
+
   color: #333;
 }
 
-#logo {
-  font-size: 20px;
-  font-weight: 700;
+/* RIGHT SECTION */
+
+.right-section {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
 }
+
+/* USERNAME */
 
 #username {
   background-color: rgb(209, 255, 255);
@@ -54,15 +80,35 @@ body {
   color: rgb(19, 192, 211);
 }
 
+/* MENU BUTTON */
+
+#menu-btn {
+  display: none;
+
+  border: none;
+
+  background: none;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  color: rgb(19, 192, 211);
+}
+
+/* HERO SECTION */
+
 .container-center {
   display: flex;
 
   flex-wrap: wrap;
 
-  background-color: aqua;
+  background-color: aliceblue;
 
   min-height: 92vh;
 }
+
+/* LEFT SECTION */
 
 #section1 {
   flex: 1 1 50%;
@@ -76,34 +122,43 @@ body {
   padding: 2rem 5rem;
 }
 
+/* RIGHT SECTION IMAGE */
+
 #section2 {
   flex: 1 1 50%;
 
   display: flex;
-
-  flex-direction: column;
 
   justify-content: center;
 
   align-items: center;
 }
 
+/* IMAGE */
+
 #image {
   width: 100%;
+
   height: auto;
 
   object-fit: cover;
+}
+
+/* TEXT */
+
+.container-element {
+  width: 80%;
 }
 
 p {
   font-size: 15px;
 
   color: rgba(0, 0, 0, 0.6);
+
+  margin-top: 1rem;
 }
 
-.container-element {
-  width: 80%;
-}
+/* BUTTON */
 
 #button {
   margin-top: 1rem;
@@ -121,75 +176,70 @@ p {
   border: none;
 
   cursor: pointer;
-}
 
-/* FIXED : wrong selector */
-#button {
   text-align: left;
 }
-.right-section {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
+
+/* MOBILE VIEW */
 
 @media screen and (max-width: 440px) {
 
+  /* MENU BUTTON SHOW */
+
+  #menu-btn {
+    display: block;
+  }
+
+  /* MOBILE NAVBAR */
+
   .navbar {
-    display: none;
 
     position: absolute;
 
-    top: 60px;
+    top: 70px;
 
-    right: 10px;
-
-    background: rgb(12, 12, 12);
-    height:100vh;
+    right: -250px;
 
     width: 200px;
+
+    height: calc(100vh - 70px);
+
+    background: rgb(12, 12, 12);
 
     border-radius: 8px;
 
     padding: 1rem;
+
+    transition: right 0.4s ease-in-out;
   }
 
-  /* FIXED : mobile me vertical menu */
+  /* MENU OPEN */
+
+  .header:focus-within .navbar {
+    right: 0;
+  }
+
+  /* MOBILE LIST */
+
   .list {
     flex-direction: column;
   }
 
   .navbar ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .navbar ul li a {
     color: white;
   }
 
-  #menu-icon {
-    display: block;
+  /* RESPONSIVE HERO */
 
-    font-size: 25px;
+  #section1,
+  #section2 {
+    flex: 1 1 100%;
 
-    cursor: pointer;
-
-    color: rgb(19, 192, 211);
-  }
-
-  /* FIXED : ab work karega */
-  #menu:checked ~ .navbar {
-    display: block;
-  }
-
-  #logo {
-    font-size: 24px;
-  }
-
-  #username {
-    width: auto;
-
-    margin-top: 0.5rem;
+    padding: 2rem;
   }
 
   h1,
@@ -197,14 +247,11 @@ p {
     width: 90%;
   }
 
-  /* OPTIONAL RESPONSIVE FIX */
-  #section1,
-  #section2 {
-    flex: 1 1 100%;
-    padding: 2rem;
-  }
-
   #button {
     width: 90%;
+  }
+
+  #logo {
+    font-size: 24px;
   }
 }
