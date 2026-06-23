@@ -44,7 +44,6 @@ body {
 .container-center {
   display:flex;
   flex-wrap:wrap;
-  background-color:aqua;
   min-height:92vh;
 }
 #section1{
