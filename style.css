@@ -111,13 +111,17 @@ body {
 
   width: 200px;
 
-  height:100vh;
+  height: 100vh;
 
   background: rgb(12, 12, 12);
 
   border-radius: 8px;
 
   padding: 1rem;
+}
+
+.mobile-menu.is-open {
+  display: block;
 }
 
 /* MOBILE LIST */
@@ -186,6 +190,30 @@ body {
   object-fit: cover;
 }
 
+/* IMAGE ERROR PLACEHOLDER */
+
+.image-error {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 200px;
+
+  background-color: #f0f0f0;
+
+  border: 1px dashed #ccc;
+
+  border-radius: 8px;
+
+  color: #888;
+
+  font-size: 14px;
+}
+
 /* TEXT */
 
 .container-element {
@@ -237,9 +265,9 @@ p {
     display: block;
   }
 
-  /* SHOW MOBILE MENU ON BUTTON FOCUS */
+  /* SHOW MOBILE MENU VIA JS CLASS */
 
-  #menu-btn:focus + .mobile-menu {
+  .mobile-menu.is-open {
     display: block;
   }
 
