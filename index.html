@@ -8,6 +8,7 @@
   <title>hero page responsive</title>
 
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
       <div id="username">Username</div>
 
 
-      <button id="menu-btn">
+      <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
         ☰
       </button>
 
@@ -77,9 +78,13 @@
 
       <img
         src="image.webp"
-        alt="laundry-image"
+        alt="Laundry service illustration"
         id="image"
+        loading="lazy"
       />
+      <div id="image-error" class="image-error" hidden>
+        <p>Unable to load image.</p>
+      </div>
 
     </div>
 
