@@ -12,38 +12,28 @@
 
 <body>
 
-  <div class="header">
+  <div class="header flex-row">
 
     <div id="logo">Logo</div>
 
     <nav class="navbar">
-      <ul class="list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
+      <ul class="nav-list" data-nav></ul>
     </nav>
 
 
-    <div class="right-section">
+    <div class="right-section flex-row">
 
       <div id="username">Username</div>
 
 
-      <button id="menu-btn">
+      <button id="menu-btn" class="btn-reset">
         ☰
       </button>
 
 
       <div class="mobile-menu">
 
-        <ul class="mobile-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
+        <ul class="nav-list" data-nav></ul>
 
       </div>
 
@@ -54,7 +44,7 @@
 
   <div class="container-center">
 
-    <div id="section1">
+    <div id="section1" class="flex-col">
 
       <h1 class="container-element">
         Revitalize Your Clothes with
@@ -67,13 +57,13 @@
         and rediscover the freshness of your clothes today!
       </p>
 
-      <button id="button">
+      <button id="button" class="btn-reset">
         Book a Service today
       </button>
 
     </div>
 
-    <div id="section2">
+    <div id="section2" class="flex-center">
 
       <img
         src="image.webp"
@@ -84,6 +74,8 @@
     </div>
 
   </div>
+
+  <script src="nav.js"></script>
 
 </body>
 
